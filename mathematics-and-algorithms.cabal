@@ -29,11 +29,11 @@ executable maa
         base ^>=4.17.2.0,
         mathematics-and-algorithms
 
-test-suite maa-test
+executable test
     default-language: Haskell2010
-    type:             exitcode-stdio-1.0
     hs-source-dirs:   test
-    main-is:          SamTest.hs
+    main-is:          Test.hs
     build-depends:    
         base ^>=4.17.2.0,
+        HUnit,
         mathematics-and-algorithms
