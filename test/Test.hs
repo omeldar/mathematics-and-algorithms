@@ -1,11 +1,13 @@
 module Main (main) where
 
 import Test.HUnit
-import SamTest
+import SquareAndMultiplyTest
+import ExtendedEuclideanTest
 
 allTests :: Test
 allTests = TestList [
-  TestLabel "Square and Multiply tests" SamTest.tests
+  TestLabel "Square and Multiply tests" SquareAndMultiplyTest.tests,
+  TestLabel "Extended Euclidean tests" ExtendedEuclideanTest.tests
   ]
 
 main :: IO ()

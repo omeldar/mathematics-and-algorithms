@@ -1,4 +1,4 @@
-module Sam (squareandmultiply) where
+module SquareAndMultiply (squareandmultiply) where
 
 squareandmultiply :: Integer -> Integer -> Integer -> Integer
 squareandmultiply base exp modulus = sqramultHelper base exp modulus 1
