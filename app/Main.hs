@@ -10,6 +10,8 @@ main = do
   print $ ModularArithmetic.squareandmultiply 252533 18168396 33554393
   print $ ModularArithmetic.squareandmultiply 855 2753 61
   print $ ModularArithmetic.squareandmultiply 855 2753 53
+  print $ ModularArithmetic.squareandmultiply 2345 157 47
+  print $ ModularArithmetic.squareandmultiply 2345 157 59
 
   -- Extended Euclidean Algorithm
   print "Extended Euclidean Algorithm:"
@@ -18,6 +20,8 @@ main = do
   print $ ModularArithmetic.extendedeuclidean 0 2
   print $ ModularArithmetic.extendedeuclidean 42 93
   print $ ModularArithmetic.extendedeuclidean 76945 578
+  print $ ModularArithmetic.extendedeuclidean 59 49
+  print $ ModularArithmetic.extendedeuclidean 47 12
 
   -- Modular Inverse
   print "Modular Inverse:"
@@ -25,6 +29,9 @@ main = do
   print $ fromJust $ ModularArithmetic.modInverse (-3) 8
   print $ fromJust $ ModularArithmetic.modInverse 17 3120
   print $ fromJust $ ModularArithmetic.modInverse 1721 262548
+  print $ fromJust $ ModularArithmetic.modInverse 17 2668
+  print $ fromJust $ ModularArithmetic.modInverse 59 47
+  print $ fromJust $ ModularArithmetic.modInverse 47 59
   
   -- Chinese Remainder Theorem
   print "Chinese Remainder Theorem:"
