@@ -1,6 +1,7 @@
 module Main where
 
 import ModularArithmetic
+import NumericalOptimization
 import Data.Maybe (fromJust)
 
 main :: IO ()
@@ -38,3 +39,20 @@ main = do
   print $ ModularArithmetic.chineseremainder [(1, 10), (2, 3), (6, 7)]
   print $ ModularArithmetic.chineseremainder [(1, 2), (2, 3), (3, 5), (4, 11)]
   print $ ModularArithmetic.chineseremainder [(1, 61), (17, 53)]
+
+  -- Newton Raphson Method
+  print "Newton Raphson Method:"
+
+  let f = \x -> x^3 - 4 * x^2 + 1
+  let f' = \x -> 3 * x^2 - 8 * x
+
+  case NumericalOptimization.newtonRaphson f f' 0.5 0.00000001 10 of
+    Just root -> print $ "f(x) = 0 at: x = " ++ show root
+    Nothing -> putStrLn "No root found within the given iterations and tolerance."
+
+  let g = \x -> 1 / 12 * x^4 + 1 / 6 * x^3 - x^2
+  let g' = \x -> 1 / 3 * x^3 + 1 / 2 * x^2 - 2 * x
+
+  case NumericalOptimization.newtonRaphson g g' (-4) 0.00001 10 of
+    Just root -> print $ "g(x) = 0 at: x = " ++ show root
+    Nothing -> putStrLn "No root found within the given iterations and tolerance."

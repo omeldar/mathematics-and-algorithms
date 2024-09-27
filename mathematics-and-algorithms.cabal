@@ -18,12 +18,15 @@ extra-source-files:
 library
     default-language: Haskell2010
     hs-source-dirs:   lib,
-                      lib/modularArithmetic
-    exposed-modules:  ModularArithmetic
+                      lib/modularArithmetic,
+                      lib/numericalOptimization
+    exposed-modules:  ModularArithmetic,
+                      NumericalOptimization
     other-modules:    SquareAndMultiply,
                       ExtendedEuclidean,
                       ModularInverse,
-                      ChineseRemainder
+                      ChineseRemainder,
+                      NewtonRaphsonMethod
     build-depends:    base ^>=4.17.2.0
 
 executable maa
