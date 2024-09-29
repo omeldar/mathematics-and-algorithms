@@ -26,7 +26,8 @@ library
                       ExtendedEuclidean,
                       ModularInverse,
                       ChineseRemainder,
-                      NewtonRaphsonMethod
+                      NewtonRaphsonMethod,
+                      GradientDescent
     build-depends:    base ^>=4.17.2.0
 
 executable maa
