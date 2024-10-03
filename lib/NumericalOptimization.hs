@@ -1,5 +1,7 @@
 module NumericalOptimization (
-    module NewtonRaphsonMethod
+    module NewtonRaphsonMethod,
+    module GradientDescent
 ) where
 
 import NewtonRaphsonMethod
+import GradientDescent
