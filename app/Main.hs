@@ -63,4 +63,4 @@ main = do
   let h x = x^2
   let h' x = 2 * x
 
-  print $ NumericalOptimization.gradientDescent h h' 2 1e-6 1000
+  print $ NumericalOptimization.gradientDescent h h' 1 0.01 1e-6 1000
